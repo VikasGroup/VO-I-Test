@@ -12,14 +12,15 @@ public class ValidateLoginPageSteps extends BasicTest {
 	@Given("^User opens \"([^\"]*)\" home page$")
 	public void user_opens_home_page(String plan) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		//driver.get(prop.getProperty(plan+".url"));
-	    throw new PendingException();
+		System.out.println(prop.getProperty("url"));
+		driver.get(prop.getProperty("url"));
+	 
 	}
 
 	@When("^User click on ir login$")
 	public void user_click_on_ir_login() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   // throw new PendingException();
 	}
 
 	@When("^User enter valid \"([^\"]*)\" and \"([^\"]*)\"$")
