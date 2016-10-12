@@ -1,9 +1,14 @@
 package com.steps;
 
+
+
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
 import com.voone.pgobjects.Online_Login_VOPgObject;
 import com.voone.pgobjects.loginPgObject;
 import com.voone.pgobjects.qntestPgObject;
@@ -11,12 +16,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+
 public class ValidateLoginPageSteps extends BasicTest {
 	
 	loginPgObject loginpgObject;
 	qntestPgObject qntestpgObject;
 	Online_Login_VOPgObject online_Login_VOPgObject;
-
+	
 
 	@Given("^User opens \"([^\"]*)\" home page$")
 	public void user_opens_home_page(String plan) throws Throwable {
@@ -57,7 +63,7 @@ public class ValidateLoginPageSteps extends BasicTest {
 	}
 
 	@When("^select the language \"([^\"]*)\"$")
-	public void select_the_language(String language) throws Throwable {
+	public void select_the_language(String language) throws Throwable {	
 	online_Login_VOPgObject = new Online_Login_VOPgObject(driver);
 	online_Login_VOPgObject.selectLanguage(language);
 	Thread.sleep(1000);
