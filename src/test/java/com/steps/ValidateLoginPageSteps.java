@@ -4,8 +4,6 @@ import java.util.Set;
 
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,7 +19,7 @@ import com.voone.pgobjects.Online_Login_VOPgObject;
 import com.voone.pgobjects.PopupsLoadPgObjects;
 import com.voone.pgobjects.QntestPgObject;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -37,6 +35,8 @@ public class ValidateLoginPageSteps extends BasicTest {
 	ForgotpasswordPgObject forgotpasswordPgObject;
 	ForgotPasswordPostEmailPgObject forgotPasswordPostEmailPgObject;
 	PopupsLoadPgObjects popupsLoadPgObjects;
+	
+	
 	@Given("^User opens \"([^\"]*)\" home page$")
 	public void user_opens_home_page(String plan) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
