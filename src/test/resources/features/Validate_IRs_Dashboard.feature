@@ -7,18 +7,17 @@ When User click on ir login
 And click on vo_option "<vo_option>"
 And User enter valid "<UserName>" and "<Password>" 
 Then User should able to login to the system
-And check IR name
+And check IR name "<name>"
 And check IRs last login
-And check status of member ship
-And check Pay Rank
-And check Title Rank
-And check Pay Rank
-And check Title Rank
-
+And check status of membership "<status>"
+And check main plan Pay Rank "<mpay_rank>"
+And check main plan Title Rank "<mtitle_rank>"
+And check rsp plan Pay Rank "<rpay_rank>"
+And check rsp plan Title Rank "<rtitle_rank>"
 
 Examples:
-|PLAN  |vo_option|UserName|Password|
-|||||
+|PLAN  |vo_option|UserName|Password|name    |status     |mpay_rank|mtitle_rank|rpay_rank  |rtitle_rank|
+|world |current  |HU269793|testpw  |IVAN WO0|NON-RENEWED|Gold Star|Gold Star  |Bronze Star|Bronze Star| 
 
 
 Scenario Outline: VO1_3.1
@@ -39,11 +38,13 @@ When User click on ir login
 And click on vo_option "<vo_option>"
 And User enter valid "<UserName>" and "<Password>" 
 Then  User should able to login to the system 
+And enter q-acc pin "<q_pin>"
 And validate q-acc bal
 
+
 Examples:
-|PLAN  |vo_option|UserName|Password|
-|world |current  |HD000404|testpw  |
+|PLAN  |vo_option|UserName|Password|q_pin|
+|world |current  |HD000404|testpw  |qatest|
 
 
 Scenario Outline: VO1_3.6
@@ -156,9 +157,10 @@ And click on vo_option "<vo_option>"
 And User enter valid "<UserName>" and "<Password>" 
 Then User should able to login to the system 
 And verify News and updates
+And validate the news page 
 Examples:
 |PLAN  |vo_option|UserName|Password|
-|||||
+|world |current  |HU269793|testpw  |
 
 
 Scenario Outline: VO1_3.0
