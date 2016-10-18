@@ -95,8 +95,8 @@ public class ValidateLoginPageSteps extends BasicTest {
 	}
 	@Then("^User should direct to PopupdLoad page \"([^\"]*)\"$")
 	public void user_should_direct_to_PopupdLoad_page(String url) throws Throwable {
-		Set<String> set = driver.getWindowHandles();
-		driver.switchTo().window((String) set.toArray()[1]);
+		//Set<String> set = driver.getWindowHandles();
+		//driver.switchTo().window((String) set.toArray()[1]);
 	    Assert.assertEquals("PopupsLoad pg validation", "https://portal.qntest.com/VirtualOffice/OnlineEStore/PopupsLoad.aspx",url);
 	}
 	@Then("^Click on forgot password$")
