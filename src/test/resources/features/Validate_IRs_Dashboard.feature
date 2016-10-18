@@ -1,6 +1,5 @@
 Feature: Validate IR's dashboard page
 
-
 Scenario Outline: VO1_3.0
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -8,7 +7,7 @@ And click on vo_option "<vo_option>"
 And User enter valid "<UserName>" and "<Password>" 
 Then User should able to login to the system
 And check IR name "<name>"
-And check IRs last login
+#And check IRs last login
 And check status of membership "<status>"
 And check main plan Pay Rank "<mpay_rank>"
 And check main plan Title Rank "<mtitle_rank>"
@@ -18,6 +17,20 @@ And check rsp plan Title Rank "<rtitle_rank>"
 Examples:
 |PLAN  |vo_option|UserName|Password|name    |status     |mpay_rank|mtitle_rank|rpay_rank  |rtitle_rank|
 |world |current  |HU269793|testpw  |IVAN WO0|NON-RENEWED|Gold Star|Gold Star  |Bronze Star|Bronze Star| 
+
+
+@test1
+Scenario Outline: VO1_3.1
+Given User opens "<PLAN>" home page
+When User click on ir login
+And click on vo_option "<vo_option>"
+And User enter valid "<UserName>" and "<Password>" 
+Then User should able to login to the system
+And check IRs last login
+
+Examples:
+|PLAN  |vo_option|UserName|Password|
+|world |current  |HU269793|testpw  |
 
 
 Scenario Outline: VO1_3.1
@@ -136,6 +149,7 @@ And verify QNET official Youtube page
 Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
+
 
 Scenario Outline: VO1_3.17
 Given User opens "<PLAN>" home page

@@ -14,7 +14,7 @@ public class CommonSteps extends BasicTest {
 	}
 	@After
 	public void after(){
-	//driver.close();
+	driver.close();
 	}
 
 }

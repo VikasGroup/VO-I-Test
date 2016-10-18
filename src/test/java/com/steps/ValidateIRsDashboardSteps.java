@@ -1,7 +1,11 @@
 package com.steps;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Set;
+import java.util.TimeZone;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -19,7 +23,19 @@ public class ValidateIRsDashboardSteps extends BasicTest {
 
 	@Then("^check IRs last login$")
 	public void check_IRs_last_login() throws Throwable {
-
+		Calendar cal = Calendar.getInstance();
+		DateFormat dateFormat = new SimpleDateFormat("dd/MMM/yyyy HH:mm");
+		System.out.println("Current TimeZone:"+ cal.getTimeZone().getDisplayName());
+		System.out.println(dateFormat.format(cal.getTime()));
+		cal.setTimeZone(TimeZone.getTimeZone("Asia/Hong_Kong"));
+		System.out.println("New TimeZone:" + cal.getTimeZone().getDisplayName());
+		System.out.println(dateFormat.format(cal.getTime()));
+		
+		
+		
+	/*	DateFormat dateFormat = new SimpleDateFormat("dd/MMM/yyyy HH:mm");
+		Calendar cal = Calendar.getInstance();
+		System.out.println(dateFormat.format(cal.getTime()));*/
 	}
 
 	@Then("^check IR name \"([^\"]*)\"$")
