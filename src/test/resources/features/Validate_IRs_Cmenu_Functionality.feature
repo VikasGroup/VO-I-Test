@@ -1,6 +1,6 @@
 Feature: Validate IR's cmenu functionality
 
-#@test1
+@test
 Scenario Outline:
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -14,7 +14,7 @@ Examples:
 |world |current  |HD000404|testpw  |
 
 
-#@test1
+@test
 Scenario Outline:
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -28,7 +28,7 @@ Examples:
 |PLAN  |vo_option|lang|UserName|Password|
 |world |current  |ar  |HD000404|testpw  |
 
-
+@test
 Scenario Outline:
 Given User opens "<PLAN>" home page
 When User click on ir login

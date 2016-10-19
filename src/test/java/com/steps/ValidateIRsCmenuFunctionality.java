@@ -22,9 +22,9 @@ public class ValidateIRsCmenuFunctionality extends BasicPgObject {
 	@Then("^click on cmenu$")
 	public void click_on_cmenu() throws Throwable {
 		System.out.println(driver.getCurrentUrl());
-		Set<String> set = driver.getWindowHandles();
+		/*Set<String> set = driver.getWindowHandles();
 		driver.switchTo().window((String) set.toArray()[1]).close();
-		driver.switchTo().window((String) set.toArray()[0]);
+		driver.switchTo().window((String) set.toArray()[0]);*/
 	
 		Thread.sleep(1000);
 

@@ -98,17 +98,36 @@ public class ValidateIRsDashboardSteps extends BasicTest {
 		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
 		online_DashBoardPgObject.checkQAbal();
 	
-		
 	}
 
-	@Then("^verify IR banner$")
-	public void verify_IR_banner() throws Throwable {
-
+	@Then("^verify IR banner image one$")
+	public void verify_IR_banner_image_one() throws Throwable {
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+	 online_DashBoardPgObject.clickImage1IR();
 	}
 
-	@Then("^verify Retail customer banner$")
-	public void verify_Retail_customer_banner() throws Throwable {
+	@Then("^verify IR banner image two$")
+	public void verify_IR_banner_image_two() throws Throwable {
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+	 online_DashBoardPgObject.clickImage2IR();
+	}
 
+	@Then("^verify RC banner image one$")
+	public void verify_RC_banner_image_one() throws Throwable {
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+	 online_DashBoardPgObject.clickImage1RC();
+	}
+
+	@Then("^verify RC banner image two$")
+	public void verify_RC_banner_image_two() throws Throwable {
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+	 online_DashBoardPgObject.clickImage2RC();
+	}
+
+	@Then("^verify RC banner image three$")
+	public void verify_RC_banner_image_three() throws Throwable {
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+	 online_DashBoardPgObject.clickImage3RC();
 	}
 
 	@Then("^verify QNET official facebook page$")
@@ -289,7 +308,9 @@ public class ValidateIRsDashboardSteps extends BasicTest {
 
 	@Then("^verify functionality of BV counter$")
 	public void verify_functionality_of_BV_counter() throws Throwable {
-
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+		System.out.println(driver.getCurrentUrl());
+		online_DashBoardPgObject.checkBV();
 	}
 
 }

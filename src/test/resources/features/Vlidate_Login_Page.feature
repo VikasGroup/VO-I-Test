@@ -53,7 +53,7 @@ Examples:
 |world |current  |AB333693|testpw  |
 |world |current  |HD000014|testpw  |
 
-@test
+
 Scenario Outline: VO1_1.49 Enrol Retail Customer under WP UAE
 Given User opens "<PLAN>" home page
 When User click on ir login

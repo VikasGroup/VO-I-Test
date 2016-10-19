@@ -1,5 +1,6 @@
 Feature: Validate IR's dashboard page
 
+@test
 Scenario Outline: VO1_3.0
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -19,7 +20,7 @@ Examples:
 |world |current  |HU269793|testpw  |IVAN WO0|NON-RENEWED|Gold Star|Gold Star  |Bronze Star|Bronze Star| 
 
 
-@test1
+@test
 Scenario Outline: VO1_3.1
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -32,7 +33,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |HU269793|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.1
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -44,7 +45,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AA016385|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.4
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -59,33 +60,37 @@ Examples:
 |PLAN  |vo_option|UserName|Password|q_pin|
 |world |current  |HD000404|testpw  |qatest|
 
-
+@test1
 Scenario Outline: VO1_3.6
 Given User opens "<PLAN>" home page
 When User click on ir login
 And click on vo_option "<vo_option>"
 And User enter valid "<UserName>" and "<Password>" 
 Then  User should able to login to the system 
-And verify IR banner
+And verify IR banner image one
+And verify IR banner image two
 
 Examples:
 |PLAN  |vo_option|UserName|Password|
-|||||
+|world |current  |HD000404|testpw  |
 
-
+@test1
 Scenario Outline: VO1_3.8
 Given User opens "<PLAN>" home page
 When User click on ir login
 And click on vo_option "<vo_option>"
 And User enter valid "<UserName>" and "<Password>" 
 Then  User should able to login to the system 
-And verify Retail customer banner
+And verify RC banner image one 
+And verify RC banner image two
+And verify RC banner image three
+
 
 Examples:
 |PLAN  |vo_option|UserName|Password|
-|world |current  |AB333693|testpw  |
+|world |current  |CU000489|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.12
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -98,7 +103,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.13
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -111,7 +116,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.14
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -124,7 +129,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.15
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -137,7 +142,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.16
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -150,7 +155,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.17
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -163,7 +168,7 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |AB333693|testpw  |
 
-
+@test
 Scenario Outline: VO1_3.19
 Given User opens "<PLAN>" home page
 When User click on ir login
@@ -176,8 +181,8 @@ Examples:
 |PLAN  |vo_option|UserName|Password|
 |world |current  |HU269793|testpw  |
 
-
-Scenario Outline: VO1_3.0
+@test
+Scenario Outline: VO1_3.20
 Given User opens "<PLAN>" home page
 When User click on ir login
 And click on vo_option "<vo_option>"
@@ -187,5 +192,5 @@ And verify functionality of BV counter
 
 Examples:
 |PLAN  |vo_option|UserName|Password|
-|||||
+|world |current  |HU269793|testpw  |
 

@@ -7,8 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
+import com.voone.pgobjects.Online_DashBoardPgObject;
 import com.voone.pgobjects.Online_Login_VOPgObject;
 import com.voone.pgobjects.loginPgObject;
 import com.voone.pgobjects.qntestPgObject;
@@ -22,6 +21,7 @@ public class ValidateLoginPageSteps extends BasicTest {
 	loginPgObject loginpgObject;
 	qntestPgObject qntestpgObject;
 	Online_Login_VOPgObject online_Login_VOPgObject;
+	Online_DashBoardPgObject online_DashBoardPgObject;
 	
 
 	@Given("^User opens \"([^\"]*)\" home page$")
@@ -49,7 +49,9 @@ public class ValidateLoginPageSteps extends BasicTest {
 
 	@Then("^User should able to login to the system$")
 	public void user_should_able_to_login_to_the_system() throws Throwable {
-	 Assert.assertEquals(driver.getCurrentUrl(), "https://portal.qntest.com/VirtualOffice/OnlineEStore/PopupsLoad.aspx");
+		online_DashBoardPgObject = new Online_DashBoardPgObject(driver);
+	 Assert.assertEquals(driver.getCurrentUrl(), "https://portal.qntest.com/VirtualOffice/OnlineEStore/PopupsLoad.aspx");	 
+	 											  
 	}
 	
 	@When("^click on vo_option \"([^\"]*)\"$")
